@@ -20,22 +20,25 @@
     {
       "source": "/admin",
       "destination": {
-        "service": "frontend",
-        "path": "/index.html"
+        "service": "frontend"
       }
     },
     {
       "source": "/admin/(.*)",
       "destination": {
-        "service": "frontend",
-        "path": "/index.html"
+        "service": "frontend"
       }
     },
     {
       "source": "/qr",
       "destination": {
-        "service": "frontend",
-        "path": "/index.html"
+        "service": "frontend"
+      }
+    },
+    {
+      "source": "/((?!api|admin|qr).*\\..*)",
+      "destination": {
+        "service": "frontend"
       }
     },
     {

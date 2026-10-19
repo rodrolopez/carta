@@ -1,0 +1,20 @@
+# Variables de entorno y credenciales
+.env
+.env.*
+!.env.example
+!.env.*.example
+.npmrc
+.netrc
+*.pem
+*.key
+*.p12
+*.pfx
+*service-account*.json
+*credentials*.json
+*secrets*.json
+
+# Dependencias, logs y artefactos locales
+node_modules/
+coverage/
+*.log
+npm-debug.log*

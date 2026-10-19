@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { Toaster } from 'sonner';
 
 import MenuLayout from './pages/client/MenuLayout';
@@ -21,6 +21,7 @@ function App() {
         </Route>
 
         <Route path="/admin" element={<DashboardLayout />}>
+          <Route index element={<Navigate to="productos" replace />} />
           <Route path="productos" element={<ProductosPage />} />
           <Route path="categorias" element={<CategoriasPage />} />
           <Route path="flyers" element={<FlyersPage />} />
